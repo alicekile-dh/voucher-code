@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Studio Voucher Code</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Voucher Code Generator</h2>
+            <form>
+                <div class="form-group">
+                    <label for="voucherCode">Voucher Code:</label>
+                    <input type="text" id="voucherCode" name="voucherCode" placeholder="Enter voucher code">
+                </div>
+            </form>
+        </div>
+        
+        <div class="preview-section">
+            <h2>Preview</h2>
+            <div class="preview-panel">
+                <div id="voucherPreview" class="voucher-display">
+                    <svg class="intersect" viewBox="-.1 0 12.9 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.9473 27.998C10.5561 27.6791 8.5436 25.9695 7.89746 23.6113L2.17188 2.93457H0.90625C0.403761 2.93449 0 2.53064 0 2.03711V0.897461C0 0.403927 0.403761 7.87435e-05 0.90625 0H12.9473V27.998Z" fill="#0A4342"/>
+                    </svg>
+                    <div id="voucherContent" class="voucher-content">Enter a voucher code to see preview</div>
+                    <svg class="intersect"  viewBox="1 0 12.9 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.2378 0.00012207C13.4873 0.0045778 13.7131 0.103949 13.8765 0.264771V2.67883C13.7131 2.83988 13.4875 2.93958 13.2378 2.93958H12.0552L6.34619 23.5802C5.66067 26.0515 3.48835 27.8098 0.946777 27.9982V0.00012207H13.2378Z" fill="#0A4342"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the input and preview elements
+        const voucherInput = document.getElementById('voucherCode');
+        const voucherContent = document.getElementById('voucherContent')
+
+        // Add event listener for real-time updates
+        voucherInput.addEventListener('input', function() {
+            const inputValue = this.value.trim();
+            
+            if (inputValue === '') {
+                voucherContent.textContent = 'Enter a voucher code to see preview';
+            } else {
+                voucherContent.textContent = inputValue;
+            }
+        });
+    </script>
+</body>
+</html>

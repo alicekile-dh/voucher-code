@@ -87,6 +87,8 @@ body {
     min-height: 120px;
     display: flex;
     align-items: center;
+    flex-flow: column;
+    gap: 20px;
     justify-content: center;
 }
 
@@ -110,6 +112,52 @@ body {
 
 .voucher-content {
     background-color: #0A4342;
+    color: var(--foodora-Light-Lemon-Yellow, #FFFFE7);
+    text-align: center;
+    font-family: "Right Grotesk";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.voucher-display-2 {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    color: white;
+
+    .code {
+        display: flex;
+        height: 22px;
+        padding: 4px 4px 4px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 23.746px 0 0 23.746px;
+        background: #02171A;
+        font-family: Inter;
+        font-size: 6px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+    }
+
+    .voucher-code {
+        display: flex;
+        height: 22px;
+        padding: 4px 8px 4px 4px;
+        align-items: center;
+        gap: 1.425px;
+        border-radius: 0 23.746px 23.746px 0;
+        background: #02171A;
+        border-left: #FFF 1px solid;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 14px; /* 140% */
+        text-transform: uppercase;
+    }
 }
 
 
